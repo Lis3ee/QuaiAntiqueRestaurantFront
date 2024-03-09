@@ -1,6 +1,7 @@
 const tokenCookieName = "accesstoken";
 const RoleCookieName = "role";
 const signoutBtn = document.getElementById("signout-btn");
+const apiUrl = "http://127.0.0.1:8000/api/";
 
 signoutBtn.addEventListener("click", signout)
 
@@ -63,7 +64,7 @@ connected (admin ou client)
 
 function showAndHideElementsForRoles(){
     const userConnected = isConnected();
-    const roule = getRole();
+    const role = getRole();
 
     let allElementsToEdit = document.querySelectorAll('[data-show]');
 
